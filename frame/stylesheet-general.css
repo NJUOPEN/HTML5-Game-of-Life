@@ -3,7 +3,7 @@ html,body{
     padding:0;
     font-size:22px;
     font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
-    background-color:rgb(100,255,100);
+    background-color:rgb(150,255,150);
     min-width: 990px;
 
 }
@@ -23,19 +23,11 @@ input,button,select,textarea{
 
 }
 
-textarea{
-    resize: none;
 
-}
 
-img{ 
-    border:none;
-
-}
 
 a {
-    display:block;
-    text-decoration:none;
+    
     color:black;
 }
 

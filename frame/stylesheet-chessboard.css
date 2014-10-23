@@ -1,11 +1,19 @@
 
 
+/*用于展示的程序 弹性比较差*/
+
 .pre-field {
     position:relative;
     left:5%;
     font-size:18px;
 
 }
+
+.link-project {
+    position:relative;
+    left:46%;
+}
+
 
 
 .board-field {
