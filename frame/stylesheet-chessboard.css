@@ -1,5 +1,7 @@
 
 
+/*用于展示的程序 弹性比较差*/
+
 .pre-field {
     position:relative;
     left:5%;
@@ -57,16 +59,16 @@
 }
 
 .run-button {
-    height:65px;
-    width:70px;
+    height:75px;
+    width:80px;
     position:relative;
     left:60px;
     font-size:16px;
 }
 
 .clear-button {
-    height:65px;
-    width:70px;
+    height:75px;
+    width:80px;
     position:relative;
     left:100px;
 
