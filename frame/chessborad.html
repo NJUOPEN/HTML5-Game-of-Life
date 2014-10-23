@@ -10,9 +10,9 @@
 
 </head>
 <body>
-    <div class="pre-field">
-
-    </div>
+    <span class="pre-field">
+        lottery by game of life
+    </span>
 
     <div class="board-field">
         <canvas class="board-input-field"></canvas>
@@ -21,30 +21,36 @@
     <div class="operation-field">
         <ul>
             <li class="operation-list">
-                <span class="notice">到场人数</span>
+                <ul>
+                    <li>
+                        <span class="total-notice">到场人数</span>
+                        <input class="total-field" type="text" size="7" maxlength="7" id="total" />
+                        人
+                    </li>
+                    <li>
+                        <span class="time-notice">限定时间</span>
+                        <input class="time-field" type="text" size="7" maxlength="7" id="time" />
+                        ms
+                    </li>
+                </ul>
             </li>
-            <li class="operation-list">
-                <input class="total-field" type="text" maxlength="4" id="total" />
-            </li>
-            <li class="operation-list">
-                <span class="notice">限定时间</span>
-            </li>
-            <li class="operation-list">
-                <input class="time-field" type="text" id="time" />
-            </li>
+
             <li class="operation-list">
                 <input class="run-button" type="submit" value="RUN？" id="run" />
             </li>
+
             <li class="operation-list">
                 <input class="clear-button" type="submit" value="CLEAR" id="clear" />
             </li>
+
+
             <li class="operation-list">
-                <span class="notice">获奖号码</span>
-            </li>
-            <li class="operation-list">
-                <input class="num-field" type="text" id="num" />
+                <span class="num-notice">获奖号码</span>
+                <span class="num-field" id="num"></span>
             </li>
         </ul>
+        
+
     </div>
 
 
