@@ -1,5 +1,6 @@
 /* Using module pattern. Everything is contained within this
  * variable. */
+var crcin;
 var life = function () {
 
     var log = log4javascript.getLogger();
@@ -122,6 +123,7 @@ var life = function () {
     }
 
     function stop() {
+	crcin = model.grid();
         clock.stop();
         view.status("Stopped");
     }

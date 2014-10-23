@@ -54,7 +54,7 @@ href="css/life.css" rel="stylesheet" />
   <div id="buttons">
     <input type="button" id="tick" value="Step" />
     <input type="button" id="start" value="Start" />
-    <input type="button" id="stop" value="Stop" />
+    <input type="button" id="stop" value="Stop" onclick="showResult()"/>
     <input type="button" id="reset" value="Reset" />
     <input type="button" id="show-settings" value="Settings" />
   </div>
@@ -66,6 +66,7 @@ href="css/life.css" rel="stylesheet" />
   <span id="generation-display">Generation: <span id="generation"></span></span>
   <span id="status">Stopped</span>
 </div>
+<p id="result">unknown</p>
 
 <div id="grid-div"></div>
 
@@ -134,5 +135,6 @@ href="css/life.css" rel="stylesheet" />
 </div>
 
 <script src="js/life.js"></script>
+<script src="js/crc32.js"></script>
 </body>
 </html>
