@@ -1,0 +1,59 @@
+html,body{ 
+    margin:0;
+    padding:0;
+    font-size:12px;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    background-color:rgb(200,255,200);
+    min-width: 990px;
+
+}
+
+h1,h2,h3,h4,h5,h6,ul,li{ 
+    margin:0;
+    padding:0; 
+    list-style-type:none;
+
+}
+
+
+
+
+input,button,select,textarea{
+    outline:none;
+
+}
+
+textarea{
+    resize: none;
+
+}
+
+img{ 
+    border:none;
+
+}
+
+a {
+    display:block;
+    text-decoration:none;
+    color:black;
+}
+
+
+span {
+    line-height:26px;
+}
+
+
+
+.left {
+    float:left;
+}
+
+.right {
+    float:right;
+}
+.clear {
+    clear:both;
+}
+
