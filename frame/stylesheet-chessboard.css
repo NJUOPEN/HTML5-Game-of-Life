@@ -59,31 +59,42 @@
 }
 
 .run-button {
-    height:75px;
-    width:80px;
-    position:relative;
+    height:65px;
+    width:70px;
+    left:60px;
+    font-size:16px;
+}
+
+.stop-button {
+    height:65px;
+    width:70px;
     left:60px;
     font-size:16px;
 }
 
 .clear-button {
-    height:75px;
-    width:80px;
-    position:relative;
+    height:65px;
+    width:70px;    
     left:100px;
+    font-size:16px;
+}
 
+.setting-button {
+    height:65px;
+    width:100px;
+    left:100px;
     font-size:16px;
 }
 
 .num-notice {
-   position:relative;
-    left:300px;
+    position:relative;
+    left:100px;
     top:15px;
 }
 
 .num-field {
     position:relative;
     top:15px;
-    left:320px;
+    left:120px;
     font-size:18px;
 }

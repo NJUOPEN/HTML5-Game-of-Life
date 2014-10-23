@@ -31,8 +31,9 @@ var life = function () {
                                '#0ff',
                                '#00f' // g10
                               ],
-        border_colour      : '#000000',
-        border_width       : 1
+        border_colour      : '#222222',
+        border_width       : 1,
+        period				:20
     };
 
     /* Global State */
@@ -366,7 +367,7 @@ var life = function () {
              * here. */
             function onDialogOpen () {
                 $('#panels > div, #panels').css('overflow', 'hidden');
-                $('#colour-panel').css('height', '350px');
+                $('#colour-panel').css('height', '300px');
                 $('.ui-dialog').css('width', '400px');
                 $('.ui-accordion').css('padding', '0');
                 $('.ui-dialog').css('padding', '0');
