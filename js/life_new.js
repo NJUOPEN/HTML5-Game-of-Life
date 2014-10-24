@@ -153,6 +153,19 @@ var life = function () {
     function stop() {
         clock.stop();
         view.status("Stopped");
+	
+	var hashValue=0xFFFFFFF;	//CRC32起始值
+	var crc32=new CRC32();
+	var i,j;
+	for (i = 0; i < model.d_grid.length; i++)
+	{
+		for(j = 0; j < model.d_grid[i].length; j++)
+		{
+			if (!model.d_grid[i][j]) model.d_grid[i][j]=0;	//若某个元素未定义，则置0
+		}
+		hashValue=crc32.crc32OfBits(model.d_grid[i],hashValue);
+	}
+	$('#num').html(Math.abs(hashValue) % totalArrived + 1);	//HASH值转换为最终中奖号码
     }
 
     function toggle_cell(x, y) {
