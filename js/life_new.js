@@ -6,14 +6,14 @@ var life = function () {
     log.addAppender(new log4javascript.BrowserConsoleAppender());
 
     var config = {
-        width               : 231,
-        height              : 115,
+        width               : 154,
+        height              : 77,
         minAutoWidth        : 3,
         minAutoHeight       : 3,
         maxWidth            : 500,
         maxHeight           : 500,
         period              : 200,
-        cell_size           : 3, //px
+        cell_size           : 5, //px
         max_cell_size       : 10,
         track_n_generations : 3, // Must be > 0.
         max_generations     : 10,
@@ -40,6 +40,9 @@ var life = function () {
     var clock;
     var model;
     var view;
+    
+    var totalArrived=0;	//总人数
+    var limitTime=10000; //指定运行时间，单位：ms
 
     // State for drawing functions
     var drawing = {};
@@ -120,8 +123,31 @@ var life = function () {
 
     /* N.B. start and stop function names clash with qunit */
     function start() {
+    	if (!$('#total')[0].value)
+    	{
+    		alert('请先设定到场人数！');
+    		return;
+    	}
+    	totalArrived=parseInt($('#total')[0].value);
+    	if (totalArrived<=0)
+    	{
+    		alert('到场人数必须大于零！');
+    		return;
+    	}
+    	if (!$('#time')[0].value)
+    	{
+    		alert('请先设定限定时间！');
+    		return;
+    	}
+    	limitTime=parseInt($('#time')[0].value);
+    	if (limitTime<=0)
+    	{
+    		alert('限定时间必须大于零！');
+    		return;
+    	}
+    	setTimeout(stop,limitTime);	//规定时间后停止
         clock.start();
-        view.status("Running");
+        view.status("Running...");
     }
 
     function stop() {

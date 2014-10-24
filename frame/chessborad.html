@@ -21,7 +21,7 @@
 </head>
 <body>
     <span class="pre-field">
-        lottery by game of life 
+        lottery by game of life - <span id="status">Stopped</span>
         <a class="link-project" href="https://github.com/NJUOPEN/HTML5-Game-of-Life.git">click here and see our project</a>
     </span>
 
@@ -40,7 +40,7 @@
                     </li>
                     <li>
                         <span class="time-notice">限定时间</span>
-                        <input class="time-field" type="text" size="7" maxlength="7" id="time" />
+                        <input class="time-field" type="text" size="7" maxlength="7" id="time" value="10000" />
                         ms
                     </li>
                 </ul>
@@ -141,6 +141,7 @@
 
 
 	<script src="../js/life_new.js"></script>
+	<script src="../js/crc32.js"></script>
 </body>
 
 
