@@ -6,8 +6,23 @@ table = "00000000 77073096 EE0E612C 990951BA 076DC419 706AF48F E963A535 9E6495A3
             var n = 0; //a number between 0 and 255  
             var x = 0; //an hex number  
             crc = crc ^ (-1);  
-            for (var i in str) {  
-                n = ( crc ^ i ) & 0xFF;  
+            for (var i in str) {
+		var c;
+		switch (i) {
+		    case null:
+			c = 'a';
+			break;
+		    case 1:
+			c = 'b';
+			break;
+		    case 2:
+			c = 'c';
+			break;
+		    case 3:
+			c = 'd';
+			break;
+		}
+                n = ( crc ^ c ) & 0xFF;  
                 x = "0x" + table.substr( n * 9, 8 );  
                 crc = ( crc >>> 8 ) ^ x;  
             }  
@@ -16,5 +31,5 @@ table = "00000000 77073096 EE0E612C 990951BA 076DC419 706AF48F E963A535 9E6495A3
 })();
 
     var showResult = function() {
-	document.getElementById("result").innerHTML=crc32(crcin) + crcin;  
+	document.getElementById("result").innerHTML=crc32(crcin) + " " + crcin;  
     }
